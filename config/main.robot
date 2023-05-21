@@ -4,11 +4,11 @@ Documentation       https://robotframework.org/SeleniumLibrary/SeleniumLibrary.h
 
 *** Variables ***
 ${url}      http://the-internet.herokuapp.com/
-${browser}  headlesschrome
+${browser}  chrome
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser                ${url}     ${browser}
+    Open Browser                ${url}     
     Set Window Size             1080    720
     Page Should Contain         Welcome to the-internet
 
