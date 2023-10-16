@@ -1,2 +1,5 @@
 robotframework
 robotframework-seleniumlibrary
+robotframework-pabot
+robotframework-axelibrary
+webdriver-manager
