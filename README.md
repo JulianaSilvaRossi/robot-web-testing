@@ -9,3 +9,8 @@ web test project using the robot framework tool
 - tests: Contém arquivos de teste, organizados por tipo de teste e por página. Dentro de cada arquivo de teste, são utilizadas as classes de Page Object e as palavras-chave definidas nos arquivos de recursos.
 - output: Contém os arquivos de resultados dos testes executados.
 - requirements.txt: Arquivo que contém as dependências do projeto e suas versões. Instalação: pip install -r requirements.txt 
+
+## Autores
+
+- [@ronymesquita](https://www.github.com/ronymesquita)
+- [@JulianaSilvaRossi](https://www.github.com/JulianaSilvaRossi)
