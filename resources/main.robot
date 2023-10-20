@@ -20,7 +20,7 @@ Open browser and access the website
         Open Browser   url=${url}  browser=${browser}      executable_path=${driver_edge}  
     ELSE IF    "${browser}" == "Google Chrome"
         ${driver_chrome}   chromesync.Get Chromedriver Path
-        Open Browser   url=${url}  browser=${browser}      executable_path=${driver_chrome}
+        Open Browser   url=${url}  browser=${browser}    options=add_argument('--disable-dev-shm-usage'); add_argument("--disable-popup-blocking"); add_argument("--ignore-certificate-errors")  executable_path=${driver_chrome}    
     ELSE IF    "${browser}" == "Firefox"
         ${driver_firefox}   firefoxsync.Get Firefoxdriver Path
         Open Browser   url=${url}  browser=${browser}      executable_path=${driver_firefox}
