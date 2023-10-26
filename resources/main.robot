@@ -5,6 +5,7 @@ Library    SeleniumLibrary    timeout=0:00:15    implicit_wait=0:00:15
 Library    OperatingSystem
 Library    DateTime
 Library    String
+Library    AxeLibrary
 Library    ../resources/config/chromesync.py
 Library    ../resources/config/edgesync.py
 Library    ../resources/config/firefoxsync.py
@@ -17,7 +18,7 @@ Open browser and access the website
 
     IF    "${browser}" == "Edge"
          ${driver_edge}   edgesync.Get Edgedriver Path
-        Open Browser   url=${url}  browser=${browser}      executable_path=${driver_edge}  
+        Open Browser   url=${url}  browser=${browser}    executable_path=${driver_edge}  
     ELSE IF    "${browser}" == "Google Chrome"
         ${driver_chrome}   chromesync.Get Chromedriver Path
         Open Browser   url=${url}  browser=${browser}    options=add_argument('--disable-dev-shm-usage'); add_argument("--disable-popup-blocking"); add_argument("--ignore-certificate-errors")  executable_path=${driver_chrome}    

@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../resources/main.robot
 
-Suite Setup        main.Open browser and access the website    Https://google.com.br    Google Chrome
+Suite Setup        main.Open browser and access the website    Https://google.com.br    Edge
 Suite Teardown     Close Browser
 
 *** Test Cases ***
