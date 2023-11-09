@@ -1,16 +1,25 @@
-# robot-web-testing
-web test project using the robot framework tool
+# ROBOT-WEB-TESTING
+Web test project using the robot framework tool
 
-## Explicação da estrutura de pastas:
+## INSTALLATION
 
-- config: Contém arquivos de configuração do projeto, como variáveis de ambiente, configurações gerais e de execução.
-- pages: Contém arquivos que definem as classes de Page Object, que representam as páginas da aplicação web.
-- resources: Contém arquivos de recursos, como bibliotecas externas e arquivos de palavras-chave (keywords) personalizados.
-- tests: Contém arquivos de teste, organizados por tipo de teste e por página. Dentro de cada arquivo de teste, são utilizadas as classes de Page Object e as palavras-chave definidas nos arquivos de recursos.
-- output: Contém os arquivos de resultados dos testes executados.
-- requirements.txt: Arquivo que contém as dependências do projeto e suas versões. Instalação: pip install -r requirements.txt 
+```bash
+    pip install -r .\requirements.txt
+```
+## USAGE
 
-## Autores
+- resources: Contains resource files, such as external libraries and custom keyword files.
+    - config: Contains project configuration files, such as environment variables, general settings, and execution settings.
+    - docs: Contains project documentation files
+    - pages: Contains files that define Page Object classes, which represent web application pages.
+    - results: Contains the result files of executed tests.
+    - main.robot: File responsible for implementing the import of libraries in one place.
+
+- tests: Contains test files organized by test type and by page. Within each test file, Page Object classes and keywords defined in resource files are used.
+
+- requirements.txt: File that contains project dependencies and their versions. Installation: pip install -r requirements.txt
+
+## AUTHORS
 
 - [@ronymesquita](https://www.github.com/ronymesquita)
 - [@JulianaSilvaRossi](https://www.github.com/JulianaSilvaRossi)
