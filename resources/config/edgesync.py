@@ -8,5 +8,6 @@ def get_edgedriver_path():
 
     driver = webdriver.Edge(service=EdgeService(driver_path))
     print(f'Driver name: {driver.name}')
-    
+    driver.close
+
     return  driver_path

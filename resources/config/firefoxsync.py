@@ -8,5 +8,6 @@ def get_firefoxdriver_path():
 
     driver = webdriver.Firefox(service=FirefoxService(driver_path))
     print(f'Driver name: {driver.name}')
+    driver.quit
     
     return  driver_path

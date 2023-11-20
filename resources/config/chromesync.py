@@ -9,4 +9,6 @@ def get_chromedriver_path():
     driver = webdriver.Chrome(service=ChromeService(driver_path))
     print(f'Driver name: {driver.name}')
 
+    driver.quit
+
     return  driver_path

@@ -3,6 +3,8 @@ Web test project using the robot framework tool
 
 ## INSTALLATION
 
+If you already have Python with pip installed, you can simply run:
+
 ```bash
     pip install -r .\requirements.txt
 ```
@@ -17,7 +19,8 @@ Web test project using the robot framework tool
 
 - tests: Contains test files organized by test type and by page. Within each test file, Page Object classes and keywords defined in resource files are used.
 
-- requirements.txt: File that contains project dependencies and their versions. Installation: pip install -r requirements.txt
+- requirements.txt: File that contains project dependencies and their versions. Installation: 
+
 
 ## AUTHORS
 
