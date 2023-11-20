@@ -1,4 +1,4 @@
-name: Run Web Tests
+name: Run Web Tests - Manual
 run-name: ${{ github.actor }} is testing by trigger - On push
 on: [push]
 
