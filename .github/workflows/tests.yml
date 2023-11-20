@@ -16,9 +16,9 @@ jobs:
 
       - name: Install Requirements
         run: |
-        python -m pip install --upgrade pip
-        pip install -U -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -U -r requirements.txt
 
       - name: Command Test Execution
         run: |
-        pabot --processes 4 -d ./resources/results ./tests/*
+          pabot --processes 4 -d ./resources/results ./tests/*
