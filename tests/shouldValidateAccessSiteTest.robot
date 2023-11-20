@@ -6,6 +6,7 @@ Suite Teardown     Close Browser
 
 *** Test Cases ***
 Validate search results on Google
+    [Tags]    smoke-test
     Given The User Enters The Item    Iphone
     When The confirm the search
     Then The Result Should Be    Aproximadamente 

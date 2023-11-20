@@ -6,6 +6,7 @@ Suite Teardown     Close Browser
 
 *** Test Cases ***
 Google Accessibility Test with context
+    [Tags]    smoke-test
    # execute accessibility tests
    Click Element    xpath://p[text()='Características']/..
    Wait Until Page Contains    Características Gerais

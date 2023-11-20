@@ -6,6 +6,7 @@ Suite Teardown     Close Browser
 
 *** Test Cases ***
 Google Accessibility Test
+    [Tags]    smoke-test
    # execute accessibility tests
    &{results}=    Run Accessibility Tests    google.json
    Log   Violations Count: ${results.violations}

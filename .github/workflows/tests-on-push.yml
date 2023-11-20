@@ -1,6 +1,12 @@
 name: Run Web Tests
-run-name: ${{ github.actor }} is testing by trigger - On push
-on: [push]
+run-name: ${{ github.actor }} is testing by trigger - manual
+on:
+  workflow_dispatch:
+    inputs: 
+      tag:
+        type: string
+        description: informa a funcionalidade que será validada
+        required: true
 
 jobs:
   web-tests:
@@ -22,7 +28,7 @@ jobs:
 
       - name: Command Test Execution
         run: |
-          pabot --processes 4 -d ./resources/results ./tests/*
+          pabot --processes 4 -d ./resources/results -i ${{ inputs.tag }} ./tests/*
       
       - name: Upload Tests Results
         if: always()
@@ -39,10 +45,3 @@ jobs:
         with:
           name: results-tests
 
-      - name: Send Report
-        if: always()
-        uses: joonvena/robotframework-reporter-action@v2.1
-        with:
-          report-path: results-tests
-          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-          show_passed_tests: false
