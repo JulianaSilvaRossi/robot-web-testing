@@ -5,6 +5,7 @@ on: [push]
 jobs:
   web-tests:
     runs-on: ubuntu-20.04
+    permissions: write-all
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,3 +23,26 @@ jobs:
       - name: Command Test Execution
         run: |
           pabot --processes 4 -d ./resources/results ./tests/*
+      
+      - name: Upload Tests Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ./resources/results
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Dowload Tests Results
+        if: always()
+        uses: actions/download-artifact@v3
+        with:
+          name: results
+
+      - name: Send Report
+        if: always()
+        uses: joonvena/robotframework-reporter-action@v2
+          with:
+            report-path: results
+            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+            show_passed_tests: false
